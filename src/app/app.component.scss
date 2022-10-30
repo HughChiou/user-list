@@ -1,0 +1,15 @@
+.user {
+  padding: .5em;
+  border-bottom: 1px solid gray;
+}
+
+.user-table {
+  table-layout: auto;
+  border-collapse: collapse;
+
+  td,
+  th {
+    border: 1px solid #222;
+    padding: .5em;
+  }
+}
