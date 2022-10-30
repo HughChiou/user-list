@@ -1,18 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
-import { USERS } from 'src/json/users';
-import { User } from 'src/model/user';
+import { FilterByNamePipe } from 'src/app/filter-by-name.pipe';
+import { Nullable, User } from 'src/model/user';
 
 @Component({
   selector: 'app-user-table',
   templateUrl: './user-table.component.html',
   styleUrls: ['./user-table.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, FormsModule, FilterByNamePipe]
 })
 export class UserTableComponent implements OnInit {
   @Input() users: unknown;
+  filterText: string = '';
 
   userList$ = new BehaviorSubject<Nullable<User[]>>(null);
 
@@ -25,4 +27,3 @@ export class UserTableComponent implements OnInit {
   }
 }
 
-type Nullable<T> = T | null;

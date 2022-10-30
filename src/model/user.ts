@@ -1,4 +1,5 @@
 import { parseJSON } from 'date-fns';
+
 export class User {
   name: string;
   age: number;
@@ -22,3 +23,5 @@ export class User {
     return parseJSON(date);
   }
 }
+
+export type Nullable<T> = T | null;
