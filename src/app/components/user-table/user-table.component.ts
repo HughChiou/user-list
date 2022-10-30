@@ -25,5 +25,12 @@ export class UserTableComponent implements OnInit {
 
     this.userList$.next(users);
   }
+
+  onClickResetBalance() {
+    this.userList$.next(this.userList$.value?.map(item => {
+      item.balance = 0;
+      return item;
+    }) as User[]);
+  }
 }
 

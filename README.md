@@ -1,27 +1,19 @@
 # UserList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+1. A table bound to the data “user.json”
 
-## Development server
+   showing the following columns
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+   - Name
+   - Age
+   - Registered Date, format dd-mm-yyyy dd:mm:ss
+   - Email
+   - Balance , format currency as pounds to 2 decimal places
 
-## Code scaffolding
+   sorted by “Name” ascending by default
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   we are not interested in paging
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. A “Search” input and label
+   - Typing in the search input filters the table results by “Name”
+3. A button named “Reset Balance” that sets all of users balances to zero and reflects this in the view.
