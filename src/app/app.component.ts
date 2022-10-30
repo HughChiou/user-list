@@ -9,21 +9,15 @@ import { User } from 'src/model/user';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'user-list';
-  userList$ = new BehaviorSubject<Nullable<User[]>>(null);
+  users: unknown;
 
-  constructor() { }
-
-  ngOnInit(): void {
-    const users: User[] = USERS.map((item) => new User(item));
-
-    this.userList$.next(users);
+  constructor() {
+    this.users = USERS;
   }
-
-
 }
 
-type Nullable<T> = T | null;
+
 
 
